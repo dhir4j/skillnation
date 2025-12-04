@@ -117,7 +117,7 @@ export default function CheckoutPage() {
                           <div key={item.id} className="flex justify-between py-3 border-b border-gray-200">
                             <div>
                               <p className="text-gray-800 font-semibold">{item.title}</p>
-                              <p className="text-sm text-gray-500">{item.duration}</p>
+                              <p className="text-sm text-gray-500">{item.short_description}</p>
                             </div>
                             <span className="font-bold text-gray-800">
                               ₹{item.price.toLocaleString()}
