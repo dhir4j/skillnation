@@ -86,7 +86,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="py-12 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <div className="py-6 md:py-12 bg-gradient-to-b from-gray-50 to-white min-h-screen">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <AnimatePresence mode="wait">
@@ -100,7 +100,7 @@ export default function CheckoutPage() {
                 variants={fadeInUp}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                <h1 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                   Checkout
                 </h1>
 
@@ -218,20 +218,20 @@ export default function CheckoutPage() {
                 transition={{ duration: 0.5 }}
                 className="max-w-2xl mx-auto"
               >
-                <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-                  <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                <div className="bg-white rounded-2xl shadow-2xl p-4 md:p-8 border border-gray-100">
+                  <div className="text-center mb-6 md:mb-8">
+                    <h1 className="text-2xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 px-2">
                       Complete Your Payment
                     </h1>
-                    <p className="text-gray-600 text-lg">Scan QR code or enter UTR number</p>
+                    <p className="text-gray-600 text-sm md:text-lg">Scan QR code or enter UTR number</p>
                   </div>
 
                   {/* QR Code */}
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8 border-2 border-blue-300">
-                    <div className="text-center mb-6">
-                      <div className="inline-block bg-white p-6 rounded-2xl shadow-xl">
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-4 md:p-8 mb-6 md:mb-8 border-2 border-blue-300">
+                    <div className="text-center mb-4 md:mb-6">
+                      <div className="inline-block bg-white p-3 md:p-6 rounded-2xl shadow-xl">
                         {selectedQR ? (
-                          <div className="relative w-80 h-80">
+                          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80">
                             <Image
                               src={`/qr-codes/${selectedQR}`}
                               alt="UPI Payment QR Code"
@@ -241,7 +241,7 @@ export default function CheckoutPage() {
                             />
                           </div>
                         ) : (
-                          <div className="w-80 h-80 bg-gray-200 rounded-xl flex items-center justify-center">
+                          <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-gray-200 rounded-xl flex items-center justify-center">
                             <div className="text-center">
                               <svg className="w-24 h-24 mx-auto text-gray-400 mb-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />

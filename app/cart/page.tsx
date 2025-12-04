@@ -21,9 +21,9 @@ export default function CartPage() {
   };
 
   return (
-    <div className="py-12">
+    <div className="py-6 md:py-12">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">Shopping Cart</h1>
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">Shopping Cart</h1>
 
         {cartItems.length === 0 ? (
           <div className="bg-white rounded-xl shadow-lg p-12 text-center">
@@ -55,9 +55,9 @@ export default function CartPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-4">
               {cartItems.map((item) => (
-                <div key={item.id} className="bg-white rounded-xl shadow-lg p-6">
-                  <div className="flex gap-6">
-                    <div className="w-32 h-32 flex-shrink-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg overflow-hidden">
+                <div key={item.id} className="bg-white rounded-xl shadow-lg p-4 md:p-6">
+                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                    <div className="w-full sm:w-32 h-48 sm:h-32 flex-shrink-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg overflow-hidden">
                       {item.image_url && (
                         <img
                           src={item.image_url}
@@ -67,19 +67,19 @@ export default function CartPage() {
                       )}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
                         {item.title}
                       </h3>
                       <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                         {item.short_description}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-blue-600">
+                        <span className="text-xl md:text-2xl font-bold text-blue-600">
                           ₹{item.price.toLocaleString()}
                         </span>
                         <button
                           onClick={() => removeFromCart(item.id)}
-                          className="text-red-600 hover:text-red-700 font-medium"
+                          className="text-red-600 hover:text-red-700 font-medium text-sm md:text-base"
                         >
                           Remove
                         </button>

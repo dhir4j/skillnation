@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section with Animated Background */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white py-16 md:py-32 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -74,7 +74,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1
-              className="text-6xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100 px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -82,7 +82,7 @@ export default function Home() {
               Welcome to SkillNation
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-50"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 md:mb-10 max-w-3xl mx-auto text-blue-50 px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -117,7 +117,7 @@ export default function Home() {
 
           {/* Floating stats */}
           <motion.div
-            className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-20"
+            className="grid grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto mt-12 md:mt-20 px-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -132,8 +132,8 @@ export default function Home() {
                 className="text-center"
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-4xl font-bold">{stat.number}</div>
-                <div className="text-blue-100 mt-2">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold">{stat.number}</div>
+                <div className="text-blue-100 mt-1 md:mt-2 text-xs sm:text-sm md:text-base">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Features Section with Scroll Animation */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 md:py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -150,10 +150,10 @@ export default function Home() {
             variants={fadeInUp}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 px-4">
               Why Choose SkillNation?
             </h2>
-            <p className="text-center text-gray-600 mb-16 text-lg max-w-2xl mx-auto">
+            <p className="text-center text-gray-600 mb-8 md:mb-16 text-base md:text-lg max-w-2xl mx-auto px-4">
               Join thousands of learners who are advancing their careers with our comprehensive IT courses
             </p>
           </motion.div>
@@ -219,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* Popular Courses Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -229,10 +229,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600 px-4">
               Popular IT Courses
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto px-4">
               Start learning with our most popular courses designed for modern developers
             </p>
           </motion.div>
@@ -322,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute w-full h-full" style={{
             backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
@@ -338,8 +338,8 @@ export default function Home() {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-4">Student Success Stories</h2>
-            <p className="text-blue-100 text-lg">Hear from our amazing community of learners</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4">Student Success Stories</h2>
+            <p className="text-blue-100 text-base md:text-lg px-4">Hear from our amazing community of learners</p>
           </motion.div>
 
           <motion.div
@@ -389,14 +389,14 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-100">
+      <section className="py-12 md:py-24 bg-gradient-to-b from-white to-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-16 text-white text-center shadow-2xl relative overflow-hidden"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-16 text-white text-center shadow-2xl relative overflow-hidden"
           >
             <motion.div
               className="absolute inset-0"
@@ -412,7 +412,7 @@ export default function Home() {
 
             <div className="relative z-10">
               <motion.h2
-                className="text-5xl font-bold mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -420,7 +420,7 @@ export default function Home() {
                 Ready to Start Your Tech Journey?
               </motion.h2>
               <motion.p
-                className="text-xl mb-10 text-blue-50 max-w-2xl mx-auto"
+                className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 text-blue-50 max-w-2xl mx-auto px-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

@@ -69,13 +69,13 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="py-12">
+    <div className="py-6 md:py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Welcome Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 mb-8">
-            <h1 className="text-4xl font-bold mb-2">Welcome back, {user.name}!</h1>
-            <p className="text-blue-100">Manage your courses and view your learning progress</p>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-6 md:p-8 mb-6 md:mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Welcome back, {user.name}!</h1>
+            <p className="text-blue-100 text-sm md:text-base">Manage your courses and view your learning progress</p>
           </div>
 
           {/* Stats Cards */}
