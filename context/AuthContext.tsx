@@ -30,12 +30,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const checkAuth = () => {
     try {
       // Check localStorage for stored user
-      const storedUser = localStorage.getItem('demo_user');
-      if (storedUser) {
-        setUser(JSON.parse(storedUser));
+      if (typeof window !== 'undefined') {
+        const storedUser = localStorage.getItem('demo_user');
+        if (storedUser) {
+          setUser(JSON.parse(storedUser));
+        }
       }
     } catch (error) {
-      localStorage.removeItem('demo_user');
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('demo_user');
+      }
     } finally {
       setLoading(false);
     }
@@ -53,7 +57,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       created_at: new Date().toISOString(),
     };
 
-    localStorage.setItem('demo_user', JSON.stringify(demoUser));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('demo_user', JSON.stringify(demoUser));
+    }
     setUser(demoUser);
   };
 
@@ -69,12 +75,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       created_at: new Date().toISOString(),
     };
 
-    localStorage.setItem('demo_user', JSON.stringify(demoUser));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('demo_user', JSON.stringify(demoUser));
+    }
     setUser(demoUser);
   };
 
   const logout = () => {
-    localStorage.removeItem('demo_user');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('demo_user');
+    }
     setUser(null);
   };
 
